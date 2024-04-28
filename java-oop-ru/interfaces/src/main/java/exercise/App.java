@@ -8,10 +8,9 @@ import java.util.List;
 public class App {
     public static List<String> buildApartmentsList(List<Home> list, int sortCount) {
         var resultList = new ArrayList<String>();
-        var sortedList = new ArrayList<>(list);
+        List<Home> sortedList = new ArrayList<>(list);
         sortedList.sort(Home::compareTo);
-        sortedList.reversed();
-        for (Home home : sortedList) {
+        for (Home home : sortedList.reversed()) {
             resultList.add(home.toString());
         }
         return resultList.stream().limit(sortCount).toList();

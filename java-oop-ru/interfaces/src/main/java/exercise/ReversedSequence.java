@@ -10,7 +10,6 @@ public class ReversedSequence implements CharSequence {
         this.text = text;
     }
 
-
     public String toString() {
         return reverseString(text);
     }
