@@ -2,7 +2,8 @@ package exercise;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 class ReversedSequenceTest {
 
@@ -10,27 +11,27 @@ class ReversedSequenceTest {
     void testToString() {
         var actual = new ReversedSequence("abcdef").toString();
         var expected = "fedcba";
-        assertEquals(actual,expected);
+        assertEquals(actual, expected);
     }
 
     @Test
     void length() {
-        var actual =new ReversedSequence("abcdef").length();
+        var actual = new ReversedSequence("abcdef").length();
         var expected = 6;
-        assertEquals(actual,expected);
+        assertEquals(actual, expected);
     }
 
     @Test
     void charAt() {
-        var actual =new ReversedSequence("abcdef").charAt(1);
+        var actual = new ReversedSequence("abcdef").charAt(1);
         var expected = 'e';
-        assertEquals(actual,expected);
+        assertEquals(actual, expected);
     }
 
     @Test
     void subSequence() {
-        var actual =new ReversedSequence("abcdef").subSequence(1,4);
+        var actual = new ReversedSequence("abcdef").subSequence(1, 4);
         var expected = "edc";
-        assertEquals(actual,expected);
+        assertEquals(actual, expected);
     }
 }

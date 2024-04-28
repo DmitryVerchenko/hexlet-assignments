@@ -1,6 +1,8 @@
 package exercise;
 
-import java.util.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 // BEGIN
 public class App {
@@ -8,7 +10,8 @@ public class App {
         var resultList = new ArrayList<String>();
         var sortedList = new ArrayList<>(list);
         sortedList.sort(Home::compareTo);
-        for (Home home : sortedList.reversed()) {
+        sortedList.reversed();
+        for (Home home : sortedList) {
             resultList.add(home.toString());
         }
         return resultList.stream().limit(sortCount).toList();

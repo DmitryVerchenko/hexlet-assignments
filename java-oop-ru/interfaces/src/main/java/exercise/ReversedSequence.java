@@ -44,6 +44,7 @@ public class ReversedSequence implements CharSequence {
     public IntStream codePoints() {
         return CharSequence.super.codePoints();
     }
+
     public static String reverseString(String str) {
         char[] array = str.toCharArray();
         String result = "";
