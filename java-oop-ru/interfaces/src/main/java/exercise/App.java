@@ -2,6 +2,7 @@ package exercise;
 
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 // BEGIN
@@ -10,7 +11,8 @@ public class App {
         var resultList = new ArrayList<String>();
         List<Home> sortedList = new ArrayList<>(list);
         sortedList.sort(Home::compareTo);
-        for (Home home : sortedList.reversed()) {
+        Collections.reverse(sortedList);
+        for (Home home : sortedList) {
             resultList.add(home.toString());
         }
         return resultList.stream().limit(sortCount).toList();
