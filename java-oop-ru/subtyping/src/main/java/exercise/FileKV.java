@@ -3,18 +3,16 @@ package exercise;
 import java.util.HashMap;
 import java.util.Map;
 
-import static exercise.Utils.*;
+import static exercise.Utils.readFile;
+import static exercise.Utils.unserialize;
+import static exercise.Utils.writeFile;
+import static exercise.Utils.serialize;
+
 
 // BEGIN
-public class FileKV implements KeyValueStorage{
-    public static void main(String[] args) {
-        KeyValueStorage storage = new FileKV("src/test/resources/file", Map.of("key", "value"));
-// Получение значения по ключу
-        System.out.println(storage.get("key", "default")); // "value"
-
-    }
+public class FileKV implements KeyValueStorage {
     String filepath;
-    Map<String,String> storage;
+    Map<String, String> storage;
 
     public FileKV(String filepath, Map<String, String> storage) {
         this.filepath = filepath;

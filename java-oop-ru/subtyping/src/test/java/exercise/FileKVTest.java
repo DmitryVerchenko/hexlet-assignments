@@ -35,7 +35,7 @@ class FileKVTest {
     // BEGIN
     @Test
     public void testSetAndUnset() {
-        var storage = new FileKV(filepath.toString(),unserialize(readFile(filepath.toString())));
+        var storage = new FileKV(filepath.toString(), unserialize(readFile(filepath.toString())));
         storage.set("key2", "value2");
         storage.set("key", "value");
         assertThat(storage.get("key2", "default")).isEqualTo("value2");
@@ -47,8 +47,8 @@ class FileKVTest {
 
     @Test
     public void testGet() {
-        var storage = new FileKV(filepath.toString(),unserialize(readFile(filepath.toString())));
-        storage.set("key","value");
+        var storage = new FileKV(filepath.toString(), unserialize(readFile(filepath.toString())));
+        storage.set("key", "value");
         var actual = storage.get("key", "default");
         var expected = "value";
         assertEquals(actual, expected);
