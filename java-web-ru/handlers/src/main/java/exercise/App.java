@@ -11,8 +11,10 @@ public final class App {
         // BEGIN
         return  Javalin.create(config -> {
             config.bundledPlugins.enableDevLogging();
-        }).get("/phones", ctx -> ctx.result(ctx.jsonMapper().toJsonString(Data.getPhones().toString(), ArrayList.class)))
-                .get("/domains", ctx -> ctx.result(ctx.jsonMapper().toJsonString(Data.getDomains().toString(), ArrayList.class)));
+        }).get("/phones", ctx -> ctx.result(ctx.jsonMapper().toJsonString(Data.getPhones()
+                        .toString(), ArrayList.class)))
+                .get("/domains", ctx -> ctx.result(ctx.jsonMapper().toJsonString(Data.getDomains()
+                        .toString(), ArrayList.class)));
         // END
     }
 
